@@ -1,4 +1,4 @@
-# OcrChatGpt
+# ChatGptOcr
 
 本项目使用PaddleSharp做ocr识别，ChatGpt做翻译，实现截图翻译。
 
