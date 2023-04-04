@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGptOcr", "ChatGptOcr\ChatGptOcr.csproj", "{D1C834E8-39D7-4EC5-8F1A-01E40D543141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{083706AC-4114-49A4-934A-4035A4D9B12B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1C834E8-39D7-4EC5-8F1A-01E40D543141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C834E8-39D7-4EC5-8F1A-01E40D543141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C834E8-39D7-4EC5-8F1A-01E40D543141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C834E8-39D7-4EC5-8F1A-01E40D543141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{083706AC-4114-49A4-934A-4035A4D9B12B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{083706AC-4114-49A4-934A-4035A4D9B12B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{083706AC-4114-49A4-934A-4035A4D9B12B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{083706AC-4114-49A4-934A-4035A4D9B12B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D53163A-9329-4BBE-BD5A-BEE7A1F4C76E}
+	EndGlobalSection
+EndGlobal
