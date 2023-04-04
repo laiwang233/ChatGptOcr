@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Util;
 using Color = System.Windows.Media.Color;
 using Point = System.Windows.Point;
 
@@ -137,7 +138,11 @@ namespace ChatGptOcr
             using var gfx = Graphics.FromImage(bmp);
             gfx.CopyFromScreen(x, y, 0, 0, new System.Drawing.Size(width, height));
 
-            // 将截图保存到剪贴板
+            var res = new Ocr().TextRecognition(bmp);
+
+            text1.Text = res;
+
+            /*// 将截图保存到剪贴板
             using var ms = new MemoryStream();
             bmp.Save(ms, ImageFormat.Png);
             ms.Seek(0, SeekOrigin.Begin);
@@ -146,7 +151,7 @@ namespace ChatGptOcr
             img.CacheOption = BitmapCacheOption.OnLoad;
             img.StreamSource = ms;
             img.EndInit();
-            Clipboard.SetImage(img);
+            Clipboard.SetImage(img);*/
 
             // 将截图保存到文件（如果需要）
             // bmp.Save("screenshot.png", ImageFormat.Png);

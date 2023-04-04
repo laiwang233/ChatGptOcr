@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="200" Width="200">
     <Grid>
+        <TextBlock Name="text1" Width="200" Height="200"></TextBlock>
         <Button Name="btnScreenshot" Click="CaptureScreen" Content="截图" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>
