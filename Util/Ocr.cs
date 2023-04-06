@@ -1,14 +1,10 @@
-using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Net.Http;
-using System.Threading.Tasks;
 using OpenCvSharp;
 using Sdcb.PaddleInference;
 using Sdcb.PaddleOCR;
-using Sdcb.PaddleOCR.Models;
 using Sdcb.PaddleOCR.Models.LocalV3;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace Util
 {
