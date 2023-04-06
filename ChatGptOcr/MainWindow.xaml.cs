@@ -1,16 +1,15 @@
-﻿using System;
+﻿using OpenCvSharp;
+using System;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using Util;
 using Color = System.Windows.Media.Color;
 using Point = System.Windows.Point;
+using Window = System.Windows.Window;
 
 namespace ChatGptOcr
 {
@@ -23,7 +22,6 @@ namespace ChatGptOcr
         private System.Windows.Shapes.Rectangle _selectionRectangle;
         private Point _startPoint;
         private Point _endPoint;
-
 
         public MainWindow()
         {
@@ -62,6 +60,11 @@ namespace ChatGptOcr
             CapturePartialScreen(x, y, width, height, @"C:\Users\27991\Desktop\1.png");
 
         }*/
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            popup.IsOpen = false;
+        }
 
         private void CaptureScreen(object sender, RoutedEventArgs e)
         {
@@ -138,9 +141,13 @@ namespace ChatGptOcr
             using var gfx = Graphics.FromImage(bmp);
             gfx.CopyFromScreen(x, y, 0, 0, new System.Drawing.Size(width, height));
 
-            var res = new Ocr().TextRecognition(bmp);
-
-            text1.Text = res;
+            var ocrText = new Ocr().TextRecognition(bmp);
+            var translateText = await new ChatGptTranslate().Chat(ocrText);
+            TranslateStr.Text = $"""
+                OCR识别文本 ==> {ocrText}
+                翻译文本 ==> {translateText}
+                """;
+            popup.IsOpen = true;
 
             /*// 将截图保存到剪贴板
             using var ms = new MemoryStream();
